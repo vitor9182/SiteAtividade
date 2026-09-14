@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Mais ou Menos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script> /*só pra testar professor*/
+    function toggleMusica() {
+        const audio = document.getElementById('bg-music');
+        const btn = document.getElementById('play');
+
+        if (audio.paused) {
+            audio.play();
+            btn.textContent = 'Tocando';
+        } else {
+            audio.pause();
+            btn.textContent = 'Pausada';
+        }
+    }
+</script>
+
+<body>
+    <header>
+    <div class="musica">
+        <span>Música:</span>
+        <button id="play" onclick="toggleMusica()">▶</button>
+    </div>
+
+    <h1>Via Láctea</h1>
+    <h3>Todos os planetas presentes em nossa galáxia</h3>
+
+    <audio id="bg-music" src="Sky.mp3" loop></audio>
+</header>
+
+    <main>
+    <div class="cards">
+        <div class="card">
+            <div class="card-itens">
+                <img src="Planetas.jpg" alt="Todos os planetas da Via Láctea">
+                <h2>Todos os Planetas</h2>
+                <p>Clique abaixo para ver todos os planetas!</p>
+                <a href="planetas.html" class="btn">Confira!</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-itens">
+                <img src="orbitatitulo.jpg" alt="Órbita dos planetas">
+                <h2>Órbita dos Planetas</h2>
+                <p>Clique abaixo para conferir a órbita dos planetas!</p>
+                <a href="orbita.html" class="btn">Confira!</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-itens">
+                <img src="contatos.jpg" alt="Todos os planetas da Via Láctea">
+                <h2>Fale comigo!</h2>
+                <p>Manda um zap.</p>
+                <a href="zap.html" class="btn">Ver Mais</a>
+            </div>
+        </div>
+    </div>
+</main>
+    
+</body>
+</html>
